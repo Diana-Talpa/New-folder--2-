@@ -1,0 +1,100 @@
+.wizard-item {
+    background: #ffffff;
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .wizard-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .wizard-name {
+    font-size: 1.8rem;
+    color: #4a90e2;
+    margin-bottom: 10px;
+  }
+  
+  .wizard-details {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .wizard-item-edit .wizard-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .wizard-item-edit .wizard-input:focus {
+    outline: none;
+    border-color: #74ebd5;
+    box-shadow: 0 0 5px rgba(74, 235, 213, 0.5);
+  }
+  
+  .wizard-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .wizard-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .wizard-save {
+    background: #4caf50;
+    color: white;
+  }
+  
+  .wizard-save:hover {
+    background: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .wizard-cancel {
+    background: #f44336;
+    color: white;
+  }
+  
+  .wizard-cancel:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+  }
+  
+  .wizard-edit {
+    background: #4a90e2;
+    color: white;
+  }
+  
+  .wizard-edit:hover {
+    background: #357abd;
+    transform: scale(1.05);
+  }
+  
+  .wizard-remove {
+    background: #f44336;
+    color: white;
+  }
+  
+  .wizard-remove:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+  }
+  
