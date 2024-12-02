@@ -1,0 +1,31 @@
+$background-gradient: linear-gradient(to bottom, #99b7ee, #1a3e7e);
+$font-family: 'Poppins', sans-serif;
+$white-color: white;
+$font-size-title: 2.5rem;
+$shadow-color: rgba(0, 0, 0, 0.4);
+
+.spell-page {
+  padding: 20px;
+  min-height: 100vh;
+  color: $white-color;
+  text-align: center;
+  font-family: $font-family;
+  background: $background-gradient;
+
+  .spell-page-header-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: block;
+  }
+
+  .spell-page-title {
+    font-size: $font-size-title;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 8px $shadow-color;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './WizardList.css';
+import './WizardList.scss';
 import { useAppContext } from '../../contexts/AppContext';
 import { fetchWizards } from '../../api/wizardsApi';
 import WizardItem from '../WizardItem/WizardItem';

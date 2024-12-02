@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './WizardForm.css';
+import './WizardForm.scss';
 import { useAppContext } from '../../contexts/AppContext';
 import { createWizard } from '../../api/wizardsApi';
 
@@ -9,6 +9,7 @@ const WizardForm = () => {
   const [wand, setWand] = useState('');
   const { dispatch } = useAppContext();
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 

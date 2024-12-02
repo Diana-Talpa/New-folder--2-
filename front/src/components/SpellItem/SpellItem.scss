@@ -1,6 +1,4 @@
-/* SpellItem.css */
 
-/* Container for each spell item */
 .spell-item {
     background-color: #1e3c72;
     border-radius: 12px;
@@ -11,11 +9,10 @@
   }
   
   .spell-item:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
   
-  /* Spell name */
   .spell-item h3 {
     font-size: 1.8rem;
     color: #fff;
@@ -23,7 +20,7 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
   
-  /* Spell effect description */
+ 
   .spell-item p {
     font-size: 1.1rem;
     color: #f1f1f1;
@@ -31,7 +28,7 @@
     line-height: 1.5;
   }
   
-  /* Buttons */
+ 
   .spell-item button {
     background-color: #ff9f00;
     color: white;
@@ -46,14 +43,13 @@
   
   .spell-item button:hover {
     background-color: #e68900;
-    transform: scale(1.05); /* Slightly enlarge buttons on hover */
+    transform: scale(1.05);
   }
   
   .spell-item button:focus {
     outline: none;
   }
   
-  /* Edit and remove buttons (style them differently) */
   .spell-item .edit-button {
     background-color: #4caf50;
   }
@@ -70,7 +66,6 @@
     background-color: #e53935;
   }
   
-  /* Form inputs for editing spell */
   .spell-item input {
     background-color: #333;
     border: 1px solid #444;
@@ -88,7 +83,6 @@
     outline: none;
   }
   
-  /* Styling for the Save/Cancel buttons in the editing mode */
   .spell-item .form-buttons {
     display: flex;
     justify-content: space-between;

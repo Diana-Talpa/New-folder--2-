@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAppContext } from '../../contexts/AppContext';
 import { deleteWizard, updateWizard } from '../../api/wizardsApi';
-import './WizardItem.css';
+import './WizardItem.scss';
 
 const WizardItem = ({ wizard }) => {
   const { state, dispatch } = useAppContext();

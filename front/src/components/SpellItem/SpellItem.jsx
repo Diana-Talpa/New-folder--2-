@@ -1,6 +1,6 @@
 import { useAppContext } from '../../contexts/AppContext';
 import { deleteSpell, updateSpell } from '../../api/spellsApi';
-import './SpellItem.css';
+import './SpellItem.scss';
 
 
 const SpellItem = ({ spell }) => {

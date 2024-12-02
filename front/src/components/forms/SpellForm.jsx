@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './SpellForm.css';
+import './SpellForm.scss';
 import { useAppContext } from '../../contexts/AppContext';
 import { createSpell } from '../../api/spellsApi';
 

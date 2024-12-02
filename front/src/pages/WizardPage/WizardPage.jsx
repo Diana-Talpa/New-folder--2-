@@ -1,5 +1,5 @@
 import React from 'react';
-import './WizardPage.css';
+import './WizardPage.scss';
 import WizardForm from '../../components/forms/WizardForm';
 import WizardList from '../../components/WizardList/WizardList';
 

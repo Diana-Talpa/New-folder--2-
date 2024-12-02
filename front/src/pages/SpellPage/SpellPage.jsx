@@ -1,5 +1,5 @@
 import React from 'react';
-import './SpellPage.css';
+import './SpellPage.scss';
 import SpellForm from '../../components/forms/SpellForm';
 import SpellList from '../../components/SpellList/SpellList';
 

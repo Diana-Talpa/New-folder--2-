@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 
 const Header = () => {
   return (
@@ -36,6 +36,7 @@ const Header = () => {
               Spells
             </NavLink>
           </li>
+          
         </ul>
       </nav>
     </header>

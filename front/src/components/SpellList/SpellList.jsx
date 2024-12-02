@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import './SpellList.css';
+import './SpellList.scss';
 import { useAppContext } from '../../contexts/AppContext';
 import { fetchSpells } from '../../api/spellsApi';
 import SpellItem from '../SpellItem/SpellItem';
