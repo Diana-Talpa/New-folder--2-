@@ -66,7 +66,10 @@ const SpellItem = ({ spell }) => {
         </div>
       ) : (
         <div>
-          <h3 onClick={handleViewDetails} style={{ cursor: 'pointer', color: 'blue' }}>
+          <h3
+            onClick={handleViewDetails}
+            style={{ cursor: 'pointer', color: 'white' }} // Set title color to white
+          >
             {spell.name}
           </h3>
           <p>{spell.effect}</p>
