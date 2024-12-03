@@ -1,10 +1,12 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { useAppContext } from '../../contexts/AppContext';
 import { deleteSpell, updateSpell } from '../../api/spellsApi';
 import './SpellItem.scss';
 
-
 const SpellItem = ({ spell }) => {
   const { state, dispatch } = useAppContext();
+  const navigate = useNavigate(); // Hook for navigation
   const isEditing = state.editingItem && state.editingItem._id === spell._id;
 
   const handleRemove = async () => {
@@ -41,6 +43,10 @@ const SpellItem = ({ spell }) => {
     dispatch({ type: 'STOP_EDIT' });
   };
 
+  const handleViewDetails = () => {
+    navigate(`/spells/${spell._id}`); // Navigate to the spell details page
+  };
+
   return (
     <div className="spell-item">
       {isEditing ? (
@@ -60,7 +66,9 @@ const SpellItem = ({ spell }) => {
         </div>
       ) : (
         <div>
-          <h3>{spell.name}</h3>
+          <h3 onClick={handleViewDetails} style={{ cursor: 'pointer', color: 'blue' }}>
+            {spell.name}
+          </h3>
           <p>{spell.effect}</p>
           <button onClick={handleEdit}>Edit</button>
           <button onClick={handleRemove}>Remove</button>

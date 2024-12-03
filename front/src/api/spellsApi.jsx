@@ -33,15 +33,23 @@ export const deleteSpell = async (id) => {
 };
 
 export const updateSpell = async (id, updatedSpell) => {
-    const response = await fetch(`${API_URL}/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(updatedSpell),
-    });
-    if (!response.ok) {
-      throw new Error('Failed to update spell');
-    }
-    return await response.json();
-  };
+  const response = await fetch(`${API_URL}/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(updatedSpell),
+  });
+  if (!response.ok) {
+    throw new Error('Failed to update spell');
+  }
+  return await response.json();
+};
+
+export const getSpell = async (id) => {
+  const response = await fetch(`${API_URL}/${id}`);
+  if (!response.ok) {
+    throw new Error('Failed to fetch spell');
+  }
+  return await response.json();
+};

@@ -23,18 +23,18 @@ export const createWizard = async (wizard) => {
 };
 
 export const updateWizard = async (id, updatedWizard) => {
-    const response = await fetch(`${API_URL}/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(updatedWizard),
-    });
-    if (!response.ok) {
-      throw new Error('Failed to update wizard');
-    }
-    return await response.json();
-  };
+  const response = await fetch(`${API_URL}/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(updatedWizard),
+  });
+  if (!response.ok) {
+    throw new Error('Failed to update wizard');
+  }
+  return await response.json();
+};
 
 export const deleteWizard = async (id) => {
   const response = await fetch(`${API_URL}/${id}`, {
@@ -42,6 +42,14 @@ export const deleteWizard = async (id) => {
   });
   if (!response.ok) {
     throw new Error('Failed to delete wizard');
+  }
+  return await response.json();
+};
+
+export const getWizard = async (id) => {
+  const response = await fetch(`${API_URL}/${id}`);
+  if (!response.ok) {
+    throw new Error('Failed to fetch wizard');
   }
   return await response.json();
 };

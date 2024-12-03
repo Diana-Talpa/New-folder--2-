@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useAppContext } from '../../contexts/AppContext';
 import { deleteWizard, updateWizard } from '../../api/wizardsApi';
 import './WizardItem.scss';
@@ -73,7 +74,9 @@ const WizardItem = ({ wizard }) => {
         </div>
       ) : (
         <div className="wizard-item-display">
-          <h3 className="wizard-name">{wizard.name}</h3>
+          <Link to={`/wizard/${wizard._id}`}>
+            <h3 className="wizard-name">{wizard.name}</h3>
+          </Link>
           <p className="wizard-details">House: {wizard.house}</p>
           <p className="wizard-details">Wand: {wizard.wand}</p>
           <div className="wizard-buttons">

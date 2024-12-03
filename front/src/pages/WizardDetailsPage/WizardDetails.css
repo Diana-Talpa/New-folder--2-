@@ -1,0 +1,46 @@
+.wizard-details-page .wizard-details {
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    color: #f3f3f3;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Garamond', serif;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 320px;
+    margin-top: 200px;
+
+  }
+  
+  .wizard-details-page .wizard-details:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .wizard-details-page .wizard-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffc857;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .wizard-details-page .wizard-details p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  .wizard-details-page .wizard-details p span {
+    font-weight: bold;
+    color: #ffdf5d;
+  }
+  
+  .wizard-details-page .wizard-details-loading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #4e4376;
+    font-family: 'Garamond', serif;
+  }
+  
