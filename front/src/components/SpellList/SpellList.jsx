@@ -1,38 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './SpellList.scss';
+import { useAppContext } from '../../contexts/AppContext';
+import { fetchSpells } from '../../api/spellsApi';
 import SpellItem from '../SpellItem/SpellItem';
 
-const SpellList = ({
-  spells,
-  onDelete,
-  showAlert, 
-  onEditStart,
-  onEditSave,
-  onEditCancel,
-  editingSpell,
-  editingFields,
-  setEditingFields,
-}) => {
+const SpellList = () => {
+  const { state, dispatch } = useAppContext();
+
+  useEffect(() => {
+    const loadSpells = async () => {
+      try {
+        const spells = await fetchSpells();
+        dispatch({ type: 'SET_SPELLS', payload: spells });
+      } catch (error) {
+        console.error('Failed to load spells:', error);
+      }
+    };
+
+    loadSpells();
+  }, [dispatch]);
+
   return (
     <div className="spell-list">
-      {spells.map((spell) => (
-        <SpellItem
-          key={spell._id}
-          spell={spell}
-          onDelete={onDelete}
-          showAlert={showAlert}
-          onEditStart={onEditStart}
-          onEditSave={onEditSave}
-          onEditCancel={onEditCancel}
-          isEditing={editingSpell && editingSpell._id === spell._id}
-          editingFields={editingFields}
-          setEditingFields={setEditingFields}
-        />
+      {state.spells.map((spell) => (
+        <SpellItem key={spell._id} spell={spell} />
       ))}
     </div>
   );
 };
 
 export default SpellList;
-
-
