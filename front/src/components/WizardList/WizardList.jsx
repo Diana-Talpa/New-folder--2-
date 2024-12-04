@@ -4,7 +4,7 @@ import { useAppContext } from '../../contexts/AppContext';
 import { fetchWizards } from '../../api/wizardsApi';
 import WizardItem from '../WizardItem/WizardItem';
 
-const WizardList = () => {
+const WizardList = ({ showAlert }) => {  
   const { state, dispatch } = useAppContext();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const WizardList = () => {
   return (
     <div className="wizard-list">
       {state.wizards.map((wizard) => (
-        <WizardItem key={wizard._id} wizard={wizard} />
+        <WizardItem key={wizard._id} wizard={wizard} showAlert={showAlert} /> 
       ))}
     </div>
   );

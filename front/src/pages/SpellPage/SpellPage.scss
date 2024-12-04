@@ -29,3 +29,12 @@ $shadow-color: rgba(0, 0, 0, 0.4);
     text-shadow: 0 4px 8px $shadow-color;
   }
 }
+
+.alert {
+  background-color: #4caf50; 
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 5px;
+}

@@ -4,16 +4,18 @@ import { useAppContext } from '../../contexts/AppContext';
 import { deleteWizard, updateWizard } from '../../api/wizardsApi';
 import './WizardItem.scss';
 
-const WizardItem = ({ wizard }) => {
+const WizardItem = ({ wizard, showAlert }) => { 
   const { state, dispatch } = useAppContext();
   const isEditing = state.editingItem && state.editingItem._id === wizard._id;
 
   const handleRemove = async () => {
     try {
       await deleteWizard(wizard._id);
-      dispatch({ type: 'REMOVE_WIZARD', payload: wizard._id });
+      dispatch({ type: 'REMOVE_WIZARD', payload: wizard._id }); 
+      showAlert('Wizard successfully deleted!');
     } catch (error) {
       console.error('Failed to remove wizard:', error);
+      showAlert('Failed to delete wizard!');
     }
   };
 
@@ -24,9 +26,7 @@ const WizardItem = ({ wizard }) => {
   const handleSave = async () => {
     try {
       const { _id, ...updatedWizard } = state.editingFields;
-
       await updateWizard(wizard._id, updatedWizard);
-
       dispatch({ type: 'UPDATE_WIZARD', payload: { ...updatedWizard, _id: wizard._id } });
       dispatch({ type: 'STOP_EDIT' });
     } catch (error) {

@@ -3,7 +3,7 @@ import './SpellForm.scss';
 import { useAppContext } from '../../contexts/AppContext';
 import { createSpell } from '../../api/spellsApi';
 
-const SpellForm = () => {
+const SpellForm = ({ showAlert }) => {
   const [name, setName] = useState('');
   const [effect, setEffect] = useState('');
   const { dispatch } = useAppContext();
@@ -13,10 +13,18 @@ const SpellForm = () => {
 
     const newSpell = { name, effect };
     try {
+      
       const createdSpell = await createSpell(newSpell);
+      
+      
       dispatch({ type: 'ADD_SPELL', payload: createdSpell });
+      
+   
       setName('');
       setEffect('');
+      
+      
+      showAlert('Successfully added spell!');
     } catch (error) {
       console.error('Failed to create spell:', error);
     }

@@ -5,6 +5,7 @@ import SpellItem from '../SpellItem/SpellItem';
 const SpellList = ({
   spells,
   onDelete,
+  showAlert, 
   onEditStart,
   onEditSave,
   onEditCancel,
@@ -19,6 +20,7 @@ const SpellList = ({
           key={spell._id}
           spell={spell}
           onDelete={onDelete}
+          showAlert={showAlert}
           onEditStart={onEditStart}
           onEditSave={onEditSave}
           onEditCancel={onEditCancel}
@@ -32,4 +34,5 @@ const SpellList = ({
 };
 
 export default SpellList;
+
 

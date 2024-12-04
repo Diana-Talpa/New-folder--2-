@@ -5,6 +5,7 @@ import './SpellItem.scss';
 const SpellItem = ({
   spell,
   onDelete,
+  showAlert,
   onEditStart,
   onEditSave,
   onEditCancel,
@@ -49,7 +50,10 @@ const SpellItem = ({
           </h3>
           <p>{spell.effect}</p>
           <button onClick={() => onEditStart(spell)}>Edit</button>
-          <button onClick={() => onDelete(spell._id)}>Remove</button>
+          <button onClick={() => {
+            onDelete(spell._id); 
+            showAlert('Successfully deleted spell');
+          }}>Remove</button>
         </div>
       )}
     </div>

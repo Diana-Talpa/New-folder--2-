@@ -3,13 +3,12 @@ import './WizardForm.scss';
 import { useAppContext } from '../../contexts/AppContext';
 import { createWizard } from '../../api/wizardsApi';
 
-const WizardForm = () => {
+const WizardForm = ({ showAlert }) => {
   const [name, setName] = useState('');
   const [house, setHouse] = useState('');
   const [wand, setWand] = useState('');
   const { dispatch } = useAppContext();
 
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -17,6 +16,7 @@ const WizardForm = () => {
     try {
       const createdWizard = await createWizard(newWizard);
       dispatch({ type: 'ADD_WIZARD', payload: createdWizard });
+      showAlert('Wizard successfully added!');
       setName('');
       setHouse('');
       setWand('');

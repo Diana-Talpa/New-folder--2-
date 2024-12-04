@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './WizardPage.scss';
 import WizardForm from '../../components/forms/WizardForm';
 import WizardList from '../../components/WizardList/WizardList';
 
 const WizardPage = () => {
+  const [alertMessage, setAlertMessage] = useState('');
+
+  const showAlert = (message) => {
+    setAlertMessage(message);
+    setTimeout(() => {
+      setAlertMessage('');
+    }, 3000); 
+  };
+
   return (
     <div className="wizard-page">
+      
+      {alertMessage && <div className="alert">{alertMessage}</div>}
+
       <div className="wizard-images">
         <img
           src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/09/12/17/potter.jpg?quality=75&width=1368&crop=3%3A2%2Csmart&auto=webp"
@@ -23,11 +35,13 @@ const WizardPage = () => {
           className="wizard-image"
         />
       </div>
+
       <h2 className="wizard-page-title">Wizards</h2>
-      <WizardForm />
-      <WizardList />
+      <WizardForm showAlert={showAlert} /> 
+      <WizardList showAlert={showAlert} /> 
     </div>
   );
 };
 
 export default WizardPage;
+
