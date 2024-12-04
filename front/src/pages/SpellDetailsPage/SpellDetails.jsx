@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getSpell } from '../../api/spellsApi';
-import './SpellDetails.css';
+import './SpellDetails.scss';
 
 const SpellDetails = () => {
   const { id } = useParams();

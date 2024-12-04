@@ -1,16 +1,15 @@
 .spell-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+
   .spell-label {
     font-size: 1.2rem;
     margin: 10px 0;
     color: #d1e8ff;
   }
-  
+
   .spell-input {
     padding: 10px;
     border: 2px solid #d1e8ff;
@@ -21,12 +20,12 @@
     background: rgba(255, 255, 255, 0.1);
     color: white;
     outline: none;
+
+    &:focus {
+      border-color: #4a90e2;
+    }
   }
-  
-  .spell-input:focus {
-    border-color: #4a90e2;
-  }
-  
+
   .spell-submit-button {
     margin-top: 15px;
     padding: 10px 20px;
@@ -37,10 +36,10 @@
     color: white;
     cursor: pointer;
     transition: background 0.3s, transform 0.3s;
+
+    &:hover {
+      background: #357ab8;
+      transform: scale(1.05);
+    }
   }
-  
-  .spell-submit-button:hover {
-    background: #357ab8;
-    transform: scale(1.05);
-  }
-  
+}

@@ -1,35 +1,31 @@
-
 .spell-item {
-    background-color: #1e3c72;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .spell-item:hover {
+  background-color: #1e3c72;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
-  
-  .spell-item h3 {
+
+  h3 {
     font-size: 1.8rem;
     color: #fff;
     margin-bottom: 10px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
-  
- 
-  .spell-item p {
+
+  p {
     font-size: 1.1rem;
     color: #f1f1f1;
     margin-bottom: 20px;
     line-height: 1.5;
   }
-  
- 
-  .spell-item button {
+
+  button {
     background-color: #ff9f00;
     color: white;
     border: none;
@@ -39,34 +35,34 @@
     font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #e68900;
+      transform: scale(1.05);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.edit-button {
+      background-color: #4caf50;
+
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+
+    &.remove-button {
+      background-color: #f44336;
+
+      &:hover {
+        background-color: #e53935;
+      }
+    }
   }
-  
-  .spell-item button:hover {
-    background-color: #e68900;
-    transform: scale(1.05);
-  }
-  
-  .spell-item button:focus {
-    outline: none;
-  }
-  
-  .spell-item .edit-button {
-    background-color: #4caf50;
-  }
-  
-  .spell-item .remove-button {
-    background-color: #f44336;
-  }
-  
-  .spell-item .edit-button:hover {
-    background-color: #45a049;
-  }
-  
-  .spell-item .remove-button:hover {
-    background-color: #e53935;
-  }
-  
-  .spell-item input {
+
+  input {
     background-color: #333;
     border: 1px solid #444;
     border-radius: 8px;
@@ -76,24 +72,24 @@
     margin-bottom: 15px;
     width: 100%;
     transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: #ff9f00;
+      outline: none;
+    }
   }
-  
-  .spell-item input:focus {
-    border-color: #ff9f00;
-    outline: none;
-  }
-  
-  .spell-item .form-buttons {
+
+  .form-buttons {
     display: flex;
     justify-content: space-between;
+
+    button {
+      width: 48%;
+
+      &:hover {
+        background-color: #e68900;
+        transform: scale(1.05);
+      }
+    }
   }
-  
-  .spell-item .form-buttons button {
-    width: 48%;
-  }
-  
-  .spell-item .form-buttons button:hover {
-    background-color: #e68900;
-    transform: scale(1.05);
-  }
-  
+}

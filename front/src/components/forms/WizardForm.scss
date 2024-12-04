@@ -1,22 +1,21 @@
 .wizard-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: #fff;
-    border: 2px solid #4a90e2;
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .wizard-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  border: 2px solid #4a90e2;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  label {
     font-size: 1.1rem;
     color: #333;
   }
-  
+
   .wizard-input {
     width: 80%;
     padding: 8px 10px;
@@ -24,13 +23,13 @@
     border-radius: 5px;
     font-size: 1rem;
     margin-top: 5px;
+
+    &:focus {
+      border-color: #74ebd5;
+      outline: none;
+    }
   }
-  
-  .wizard-input:focus {
-    border-color: #74ebd5;
-    outline: none;
-  }
-  
+
   .wizard-submit {
     background: #4a90e2;
     color: #fff;
@@ -40,16 +39,16 @@
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    transition:  0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s;
+
+    &:hover {
+      background: #0073e6;
+      transform: scale(1.05);
+    }
+
+    &:active {
+      background: #005bb5;
+      transform: scale(0.98);
+    }
   }
-  
-  .wizard-submit:hover {
-    background: #0073e6;
-    transform: scale(1.05);
-  }
-  
-  .wizard-submit:active {
-    background: #005bb5;
-    transform: scale(0.98);
-  }
-  
+}

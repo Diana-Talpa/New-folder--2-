@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './WizardDetails.css';
+import './WizardDetails.scss';
 import { getWizard } from '../../api/wizardsApi';
 
 const WizardDetails = () => {
